@@ -19,6 +19,10 @@ def exo(message: types.Message):
 def bread(message: types.Message):
     msg_text = 'пизда'
     bot.reply_to(message, msg_text)
+    
+def bread1(message: types.Message):
+    msg_text = 'пидора ответ'
+    bot.reply_to(message, msg_text)
 
 
 def season(message: types.Message):
