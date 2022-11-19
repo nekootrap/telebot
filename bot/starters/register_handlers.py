@@ -24,7 +24,7 @@ def register_all_handlers(bot):
     
     bot.register_message_handler(
         guess_the_number,
-        func=lambda x: True
+        regexp=r"//\d+"
     )
     # bot.register_message_handler(
     #     exo,

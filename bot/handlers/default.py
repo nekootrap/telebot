@@ -99,17 +99,17 @@ def weather(message: types.Message):
     except Exception:
         bot.reply_to(message, 'произошли технические шоколадки :<')
 
-def guess_the_number(message: types.Message):
+def guess_the_number(message: types.Message) -> None:
     intt = randint(1, 11)
     
-    user_number = message.text
+    user_number = message.text.strip('//')
     
     if user_number.isdigit():
         if user_number == str(intt):
-            return 'верно!'
+            bot.reply_to(message, 'верно!')
         else:
-            return 'неверно('
+            bot.reply_to(message, 'не верно(')
         
     else:
-        return 'это не число!'
+        bot.reply_to(message, 'это не число!!')
     
